@@ -13,7 +13,7 @@ namespace MicroElements.AutoFixture.NodaTime.Tests
             new Fixture()
                 .Customize(new NodaTimeCustomization())
                 .Create<LocalDate>()
-                .Should().NotBe(default(LocalDate));
+                .Should().NotBe(default);
         }
 
         [Fact]
@@ -22,7 +22,7 @@ namespace MicroElements.AutoFixture.NodaTime.Tests
             new Fixture()
                 .Customize(new NodaTimeCustomization())
                 .Create<LocalTime>()
-                .Should().NotBe(default(LocalTime));
+                .Should().NotBe(default);
         }
 
         [Fact]
@@ -31,7 +31,16 @@ namespace MicroElements.AutoFixture.NodaTime.Tests
             new Fixture()
                 .Customize(new NodaTimeCustomization())
                 .Create<LocalDateTime>()
-                .Should().NotBe(default(LocalDateTime));
+                .Should().NotBe(default);
+        }
+        
+        [Fact]
+        public void InstantGenerator()
+        {
+            new Fixture()
+                .Customize(new NodaTimeCustomization())
+                .Create<Instant>()
+                .Should().NotBe(default);
         }
     }
 }

@@ -9,6 +9,7 @@ namespace MicroElements.AutoFixture.NodaTime
             fixture.Customizations.Add(new LocalDateGenerator());
             fixture.Customizations.Add(new LocalTimeGenerator());
             fixture.Customizations.Add(new LocalDateTimeGenerator());
+            fixture.Customizations.Add(new InstantGenerator());
         }
     }
 }
