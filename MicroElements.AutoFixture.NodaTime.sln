@@ -1,15 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B54312CA-BCB4-43A4-93C0-CAEB207154DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroElements.AutoFixture.NodaTime", "src\MicroElements.AutoFixture.NodaTime\MicroElements.AutoFixture.NodaTime.csproj", "{508E3FFB-FD89-48BC-97BE-941D9F1CEA03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroElements.AutoFixture.NodaTime", "src\MicroElements.AutoFixture.NodaTime\MicroElements.AutoFixture.NodaTime.csproj", "{508E3FFB-FD89-48BC-97BE-941D9F1CEA03}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3BFCE7AF-607D-46CF-B535-CC22C2AF3BE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroElements.AutoFixture.NodaTime.Tests", "test\MicroElements.AutoFixture.NodaTime.Tests\MicroElements.AutoFixture.NodaTime.Tests.csproj", "{54C36C6B-257C-47BC-8A61-9571AA4C0781}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroElements.AutoFixture.NodaTime.Tests", "test\MicroElements.AutoFixture.NodaTime.Tests\MicroElements.AutoFixture.NodaTime.Tests.csproj", "{54C36C6B-257C-47BC-8A61-9571AA4C0781}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7DF60AF7-B328-4034-A577-0BE8A338111A}"
+	ProjectSection(SolutionItems) = preProject
+		CHANGELOG.md = CHANGELOG.md
+		README.md = README.md
+		version.props = version.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,9 +26,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{508E3FFB-FD89-48BC-97BE-941D9F1CEA03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -49,8 +53,14 @@ Global
 		{54C36C6B-257C-47BC-8A61-9571AA4C0781}.Release|x86.ActiveCfg = Release|Any CPU
 		{54C36C6B-257C-47BC-8A61-9571AA4C0781}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{508E3FFB-FD89-48BC-97BE-941D9F1CEA03} = {B54312CA-BCB4-43A4-93C0-CAEB207154DA}
 		{54C36C6B-257C-47BC-8A61-9571AA4C0781} = {3BFCE7AF-607D-46CF-B535-CC22C2AF3BE7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4195BA8F-9ECF-4CA1-AF10-E0E28793D20F}
 	EndGlobalSection
 EndGlobal

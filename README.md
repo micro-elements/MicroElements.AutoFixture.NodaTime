@@ -1,5 +1,5 @@
 # MicroElements.AutoFixture.NodaTime
-{Subject}
+Autogenerating NodaTime types with AutoFixture
 
 ## Statuses
 [![License](https://img.shields.io/github/license/micro-elements/MicroElements.AutoFixture.NodaTime.svg)](https://raw.githubusercontent.com/micro-elements/MicroElements.AutoFixture.NodaTime/master/LICENSE)
