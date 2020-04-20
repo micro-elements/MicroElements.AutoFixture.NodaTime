@@ -1,3 +1,6 @@
+# 0.3.0
+- xUnit dependency removed
+
 # 0.2.0
 - Added InstantGenerator (PR# 1 by  sfmskywalker)
 - NodaTime updated to 2.4.7
