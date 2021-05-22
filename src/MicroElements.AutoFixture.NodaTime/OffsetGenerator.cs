@@ -7,13 +7,14 @@ using NodaTime;
 
 namespace MicroElements.AutoFixture.NodaTime
 {
+
     /// <summary>
-    /// AutoFixture generator for <see cref="LocalDate"/>.
+    /// AutoFixture generator for <see cref="Offset"/>.
     /// </summary>
-    public class LocalDateGenerator : AbstractDateTimeOffsetBasedSpecimenBuilder<LocalDate>
+    public class OffsetGenerator : AbstractDateTimeOffsetBasedSpecimenBuilder<Offset>
     {
         /// <inheritdoc/>
-        protected override LocalDate CreateFromDateTimeOffset(DateTimeOffset dateTimeOffset, ISpecimenContext context)
-            => LocalDate.FromDateTime(dateTimeOffset.DateTime);
+        protected override Offset CreateFromDateTimeOffset(DateTimeOffset dateTimeOffset, ISpecimenContext context)
+            => Offset.FromTimeSpan(dateTimeOffset.Offset);
     }
 }

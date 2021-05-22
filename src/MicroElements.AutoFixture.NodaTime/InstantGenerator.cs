@@ -10,22 +10,10 @@ namespace MicroElements.AutoFixture.NodaTime
     /// <summary>
     /// AutoFixture generator for <see cref="Instant"/>.
     /// </summary>
-    public class InstantGenerator : ISpecimenBuilder
+    public class InstantGenerator : AbstractDateTimeOffsetBasedSpecimenBuilder<Instant>
     {
-        /// <inheritdoc />
-        public object Create(object request, ISpecimenContext context)
-        {
-            if (context == null)
-            {
-                throw new ArgumentNullException(nameof(context));
-            }
-
-            if (!typeof(Instant).Equals(request))
-            {
-                return new NoSpecimen();
-            }
-
-            return Instant.FromDateTimeUtc(DateTime.Now.ToUniversalTime());
-        }
+        /// <inheritdoc/>
+        protected override Instant CreateFromDateTimeOffset(DateTimeOffset dateTimeOffset, ISpecimenContext context)
+            => Instant.FromDateTimeOffset(dateTimeOffset);
     }
 }
