@@ -10,22 +10,10 @@ namespace MicroElements.AutoFixture.NodaTime
     /// <summary>
     /// AutoFixture generator for <see cref="LocalTime"/>.
     /// </summary>
-    public class LocalTimeGenerator : ISpecimenBuilder
+    public class LocalTimeGenerator : AbstractDateTimeOffsetBasedSpecimenBuilder<LocalTime>
     {
-        /// <inheritdoc />
-        public object Create(object request, ISpecimenContext context)
-        {
-            if (context == null)
-            {
-                throw new ArgumentNullException(nameof(context));
-            }
-
-            if (!typeof(LocalTime).Equals(request))
-            {
-                return new NoSpecimen();
-            }
-
-            return LocalTime.FromTicksSinceMidnight(DateTime.Now.TimeOfDay.Ticks);
-        }
+        /// <inheritdoc/>
+        protected override LocalTime CreateFromDateTimeOffset(DateTimeOffset dateTimeOffset, ISpecimenContext context)
+            => LocalTime.FromTicksSinceMidnight(dateTimeOffset.TimeOfDay.Ticks);
     }
 }
