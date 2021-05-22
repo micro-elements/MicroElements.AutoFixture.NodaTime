@@ -8,8 +8,6 @@ Autogenerating NodaTime types with AutoFixture
 [![MyGetVersion](https://img.shields.io/myget/micro-elements/v/MicroElements.AutoFixture.NodaTime.svg)](https://www.myget.org/feed/micro-elements/package/nuget/MicroElements.AutoFixture.NodaTime)
 
 [![Travis](https://img.shields.io/travis/micro-elements/MicroElements.AutoFixture.NodaTime/master.svg?logo=travis)](https://travis-ci.org/micro-elements/MicroElements.AutoFixture.NodaTime)
-[![AppVeyor](https://img.shields.io/appveyor/ci/micro-elements/microelements-autofixture-nodatime.svg?logo=appveyor)](https://ci.appveyor.com/project/micro-elements/microelements-autofixture-nodatime)
-[![Coverage Status](https://img.shields.io/coveralls/micro-elements/MicroElements.AutoFixture.NodaTime.svg)](https://coveralls.io/r/micro-elements/MicroElements.AutoFixture.NodaTime)
 
 [![Gitter](https://img.shields.io/gitter/room/micro-elements/MicroElements.AutoFixture.NodaTime.svg)](https://gitter.im/micro-elements/MicroElements.AutoFixture.NodaTime)
 
@@ -25,6 +23,32 @@ dotnet add package MicroElements.AutoFixture.NodaTime
 Windows: Run `build.ps1`
 
 Linux: Run `build.sh`
+
+## Usage
+Add `NodaTimeCustomization` to `Fixture`:
+
+```csharp
+var localDate = new Fixture()
+    .Customize(new NodaTimeCustomization())
+    .Create<LocalDate>();
+
+```
+
+## Supported types
+* LocalDate
+* LocalTime
+* LocalDateTime
+* OffsetDate
+* OffsetTime
+* OffsetDateTime
+* YearMonth
+* AnnualDate
+* DateInterval
+* Interval
+* Period
+* Duration
+* DateTimeZone
+* ZonedDateTime
 
 ## License
 This project is licensed under the MIT license. See the [LICENSE] file for more info.

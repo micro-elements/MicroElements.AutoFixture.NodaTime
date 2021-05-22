@@ -35,7 +35,7 @@ namespace MicroElements.AutoFixture.NodaTime
         /// </summary>
         /// <param name="dateTimeOffset">The DateTimeOffset value to use for specimen building.</param>
         /// <returns>The generated value.</returns>
-        /// <param name="context"></param>
+        /// <param name="context">A context that can be used to create other specimens.</param>
         protected abstract T CreateFromDateTimeOffset(DateTimeOffset dateTimeOffset, ISpecimenContext context);
     }
 }

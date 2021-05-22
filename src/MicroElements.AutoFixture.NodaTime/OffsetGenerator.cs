@@ -7,7 +7,6 @@ using NodaTime;
 
 namespace MicroElements.AutoFixture.NodaTime
 {
-
     /// <summary>
     /// AutoFixture generator for <see cref="Offset"/>.
     /// </summary>

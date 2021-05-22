@@ -1,3 +1,7 @@
+# 1.0.0
+- NodaTime updated to 3.0.0
+- Added support for types: OffsetDate, OffsetTime, OffsetDateTime, YearMonth ,AnnualDate, DateInterval, Interval, Period, Duration, DateTimeZone, ZonedDateTime (PR#3 by @gliljas)
+
 # 0.3.0
 - xUnit dependency removed
 

@@ -1,4 +1,3 @@
-using System;
 using AutoFixture;
 using FluentAssertions;
 using NodaTime;
